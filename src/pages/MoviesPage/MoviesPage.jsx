@@ -19,11 +19,7 @@ const initialValues = {
 };
 
 const schema = yup.object().shape({
-  searchMovies: yup
-    .string()
-    .min(2, 'Too Short!')
-    .max(100, 'Too Long!')
-    .required('Required'),
+  searchMovies: yup.string().min(2, 'Too Short!').max(50, 'Too Long!'),
 });
 
 export default function MoviesPage() {
@@ -50,7 +46,7 @@ export default function MoviesPage() {
           </SearchForm>
         </Formik>
 
-        {loading && <InfinitySpin color="grey" />}
+        {loading && <InfinitySpin color="black" />}
         {item.length !== 0 && !error && (
           <List>
             {item.map(item => (
