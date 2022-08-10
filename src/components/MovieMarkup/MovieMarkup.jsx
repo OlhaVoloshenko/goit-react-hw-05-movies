@@ -1,5 +1,5 @@
 import { Card, Score, ScoreContainer, Main } from './MovieMarkup.styled';
-import BackLink from 'components/BackLink/BackLink';
+import { BackLink } from 'components/BackLink/BackLink';
 import { useLocation } from 'react-router-dom';
 
 export const MovieMarkup = ({ item, error }) => {

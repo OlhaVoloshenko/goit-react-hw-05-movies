@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { MdOutlineKeyboardBackspace } from 'react-icons/md';
-const BackLink = ({ prevLocation }) => {
+
+export const BackLink = ({ prevLocation }) => {
   const navigate = useNavigate();
   const goBack = () => {
     navigate(prevLocation || '/');
@@ -12,4 +13,3 @@ const BackLink = ({ prevLocation }) => {
     </button>
   );
 };
-export default BackLink;

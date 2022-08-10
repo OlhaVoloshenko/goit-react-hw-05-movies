@@ -22,7 +22,7 @@ const schema = yup.object().shape({
   searchMovies: yup
     .string()
     .min(2, 'Too Short!')
-    .max(70, 'Too Long!')
+    .max(100, 'Too Long!')
     .required('Required'),
 });
 
